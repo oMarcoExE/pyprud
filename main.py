@@ -1,8 +1,7 @@
 from ui import UI
-from db import BD
 
 ui = UI()
-banco = BD("catalogoFilmes.db")
+
 
 opcao = ""
 while opcao != 0:
@@ -14,6 +13,7 @@ while opcao != 0:
         ## Cadastro de filmes
     if opcao == 1:
         ui.mostraCadastroFilmes()
+        opcao = ""
 
         ## Lista de filmes
     if opcao == 2:
