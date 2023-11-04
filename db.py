@@ -39,7 +39,7 @@ class BD:
             print("Erro ao cadastrar dados!")
             return False
 
-    def buscaDados(self, tabela, campos = '*'):
+    def buscarDados(self, tabela, campos = '*'):
         sql = f"SELECT {campos} from {tabela}"
         self.cursor.execute(sql)
         

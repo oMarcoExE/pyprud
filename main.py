@@ -1,4 +1,5 @@
 from ui import UI
+from db import BD
 
 ui = UI()
 
@@ -17,5 +18,6 @@ while opcao != 0:
 
         ## Lista de filmes
     if opcao == 2:
-        pass
-
+        ui.mostrarListaFilmes()
+        opcao = ""
+        ui.limpaTela

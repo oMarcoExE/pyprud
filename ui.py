@@ -85,3 +85,24 @@ class UI:
                return self.solicitaValor(legenda, tipo, permiteNulo)
         return valor
 
+    def mostrarListaFilmes(self):
+        self.logoTipo()
+
+        print("Veja abaixo a lista de filmes cadastrados. ")
+        print()
+        
+        filmes = self.banco.buscarDados('filmes')
+        print("=====================================")
+        for filme in filmes:
+            print("ID - ", filme[0])
+            print("Nome: ", filme[1])
+            print("Genero: ", filme[2])
+            print("Duração: ", filme[3])
+            print("Diretor: ", filme[4])
+            print("Estudio: ", filme[5])
+            print("Classificacao: ", filme[6])
+            print("Ano: ", filme[7])
+            print("=====================================")
+
+        print()
+        input("Aperte Enter para continuar")
